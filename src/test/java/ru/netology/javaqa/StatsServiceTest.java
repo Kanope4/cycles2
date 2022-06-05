@@ -32,7 +32,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long actual = service.maxi(sales);
-        long expected = 5;
+        long expected = 8;
         Assertions.assertEquals(expected, actual);
 
     }
@@ -45,6 +45,22 @@ public class StatsServiceTest {
         long expected = 5;
         Assertions.assertEquals(expected, actual);
 
+    }
+    @Test
+    public void shouldAboveAvg(){
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.aboveAvg(sales);
+        long expected = 5;
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldMinSales(){
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.minSales(sales);
+        long expected = 5;
+        Assertions.assertEquals(expected, actual);
     }
 }
 

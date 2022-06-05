@@ -58,16 +58,16 @@ public class StatsService {
     }
 
     public int minSales(long[] sales) {
-        int minMonth = 0;
+        int minAvg = 0;
         int month = 0;
         for (long sale : sales) {
 
-            if (sale <= sales[minMonth]) {
-                minMonth = month;
+            if (sale <= sales[minAvg]) {
+                minAvg = month;
             }
             month = month + 1;
         }
-        return minMonth + 1;
+        return minAvg + 1;
     }
 
 
@@ -83,4 +83,6 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
+
+
 }
