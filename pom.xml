@@ -30,8 +30,9 @@
                 <configuration>
                     <failIfNoTests>true</failIfNoTests>
                 </configuration>
-            </plugin>
 
+
+            </plugin>
         </plugins>
     </build>
 
